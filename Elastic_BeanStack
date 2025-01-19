@@ -1,0 +1,44 @@
+ELastic Beanstalk
+============================
+but it is for small project.
+end to end web application management service 
+It provides platform as a service (paas)
+AWS will provide ready made platform to run our application when we go for BeanStack.
+
+Note : Upload your code and run your application, aws will take care of infrastructure and platform to run your application.
+
+
+
+
+
+
+======================================================================================
+Dynamic Web App - Deployment Process
+======================================================================================
+
+1. Create Network (VPC)
+2. Create Security Groups
+3. Enable Inbound Rules
+4. Create EC2 Instances
+5.Install required softwares to run the code
+    ex: java, Tomcat, IIS
+6. Create Load Balancer
+7.Setup Auto Scaling group
+
+======================================================================================
+Lab - Task
+======================================================================================
+step -1: Create IAM role with below 3 policies
+      -AWSElasticBeanstalkMulticontanierDocker
+      -AWSElasticBeanstakWebTier
+      -AWSElasticBeanstalkWorkderTier
+
+Role Name : Mayuri_Beanstalk
+
+
+2. Create Application using Beanstack
+
+3. Create Enviroment for the application by choosing required Runtime.
+    ex. java 
+
+Environment : platform and s/w that required to run our aaplication
