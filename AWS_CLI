@@ -1,0 +1,35 @@
+AWs CLI
+===================
+
+AWS provides two ways of infrastructure configurations
+  1.AWS Management web console. (browser)
+  2.AWS CLI (command Line Interface)
+
+
+==========================================================================
+Using the AWS web Console (graphical user interface)
+==========================================================================
+
+----It is a graphical method to connect to various AWS resources, their configuration, modification, etc.
+
+-----It is simple to use and does not require knowledge of scripting.
+
+
+
+===========================================================================
+AWS Command Line Interface:
+===========================================================================
+
+---Usually, the script provides you with the flexibility ot manage multiple AWS resources, infrastructures effectively.
+---It is simple to use and does not require knowledge of scripting.
+
+===========================================================================
+Configuring AWS ClI
+===========================================================================
+1. Create AWS account
+    Create Ec2 instance and connect it with git bash
+2.Login into AWS account and generate access key.
+
+    Access Key :
+    secret Key:
+3.Install AWS CLI s/w
