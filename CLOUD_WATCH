@@ -1,0 +1,51 @@
+cloud Watch
+===================
+
+--It is used for monitoring AWS resources.
+--Cloudwatch enables real-time monitoring of AWS resources such as Amazon Elastic Comput Cloud (EC2) instances, Amazon Elastic Block Store (EBS) Volumes, Elastic Load Balancing (EBS)
+ Volumes, Elastic Load Balancing and Amazon Relational Database Service (RDS) instance.
+
+  ================================================
+  UseCase
+  ================================================
+
+  --Monitor EC2 Instance 24/7
+  --If EC2 instance CPU utilization is above 10% then trigger alarm 
+  --When alarm got triggered send email notification to management.
+
+
+  ==================================================
+  How to send Email Notification in AWS
+=====================================================
+
+  In AWS we have SNS to send notifications
+      SNS: simple notification service
+  - SNS works based on pub and sub model
+      pub - > publisher ( will send msg ot sns topic)
+      sub -> subscriber ( will recieve msg from topic)
+
+
+==========================================================================
+  Cloud Watch and SNS -Lab Task
+==========================================================================
+
+  1. Create SNS Topic with Email Notification (Standard Create)
+  2. Configure Email Subscription in SNS Topic (confirm subscription recieved in email)
+  3. create EC2 instance and configure cloud watch Alarm to Monitor
+      - Select Ec2 instance -> Action -> Monitor and trouble shoot -> Manager Cloud Watch alarms -> Create Cloud watch Alarm
+Alarm Notification : Select SNS topic whic we have created 
+Alarm Thresh Hold : Avg CPU Utilization  -> 5%
+  
+  4.connect to ec2 vm and incerease load
+    $sudo yum install stress -y
+    $sudo stress --cpu 8 -v --timeout 180s
+
+  Note : execute stress commnd 3 to 4 times..
+
+  5. Observe the behaviour of cloud watch / Alaram / SNS
+    (we should get Email Notification)
+Note: When Alarm got triggered, its status will be changed to 'In Alarm'
+  --we can Monitor our Alarm history (how many times it got triggered)
+(Goto Cloud Watch --> Slect Alarms  -> Click Alarm -> Click on History )
+
+  
